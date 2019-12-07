@@ -37,6 +37,7 @@ def hit?(card_total)
     choice = get_user_input
   elsif (choice == 'h')
     card_total = card_total + deal_card
+    return card_total
   elsif (choice == 's')
     return card_total
   end
@@ -54,7 +55,7 @@ def runner
   welcome
   card_total = initial_round
   while (card_total <= 21)
-    hit?(card_total)
+    card_total = hit?(card_total)
     display_card_total(card_total)
   end
   
