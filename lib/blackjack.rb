@@ -3,7 +3,7 @@ def welcome
 end
 
 def deal_card
-  rand(1..11)
+  returns rand(1..11)
 end
 
 def display_card_total(card_total)
@@ -19,11 +19,11 @@ def get_user_input
 end
 
 def end_game(card_total)
-  puts "Sorry, you suck because your card total was #{card_total}"
+  puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
 def initial_round
-  # code #initial_round here
+  returns (deal_card + deal_card)
 end
 
 def hit?
